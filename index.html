@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>С Днём Святого Валентина, любимая</title>
+  <style>
+    :root {
+      --rose: #ff6f91;
+      --berry: #d72660;
+      --night: #1b1b3a;
+      --cream: #fff5f8;
+      --gold: #ffd166;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at top, #fff0f6 0%, #ffe3ec 45%, #f7c8d8 100%);
+      font-family: "Segoe UI", "Inter", system-ui, -apple-system, sans-serif;
+      color: var(--night);
+      padding: 24px;
+    }
+
+    .card {
+      width: min(720px, 92vw);
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 28px;
+      box-shadow: 0 30px 60px rgba(215, 38, 96, 0.25);
+      padding: 48px 48px 56px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before,
+    .card::after {
+      content: "";
+      position: absolute;
+      width: 240px;
+      height: 240px;
+      background: radial-gradient(circle, rgba(255, 111, 145, 0.4), transparent 70%);
+      border-radius: 50%;
+      z-index: 0;
+    }
+
+    .card::before {
+      top: -80px;
+      right: -60px;
+    }
+
+    .card::after {
+      bottom: -100px;
+      left: -70px;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 28px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--cream);
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-weight: 600;
+      color: var(--berry);
+      letter-spacing: 0.5px;
+      box-shadow: inset 0 0 0 1px rgba(215, 38, 96, 0.15);
+    }
+
+    .title {
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      margin: 0;
+      line-height: 1.1;
+      color: var(--berry);
+    }
+
+    .subtitle {
+      margin: 0;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #4b3b47;
+    }
+
+    .highlight {
+      background: linear-gradient(90deg, rgba(255, 209, 102, 0.6), rgba(255, 111, 145, 0.4));
+      padding: 0 6px;
+      border-radius: 6px;
+    }
+
+    .heart-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+    }
+
+    .heart-card {
+      background: white;
+      padding: 16px 18px;
+      border-radius: 18px;
+      border: 1px solid rgba(215, 38, 96, 0.15);
+      box-shadow: 0 12px 25px rgba(215, 38, 96, 0.08);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.95rem;
+    }
+
+    .heart {
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #ff7a9f, #ff4d6d);
+      color: white;
+      border-radius: 9px;
+      font-size: 1.1rem;
+    }
+
+    .footer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px dashed rgba(215, 38, 96, 0.3);
+      font-size: 0.95rem;
+    }
+
+    .signature {
+      font-weight: 600;
+      color: var(--berry);
+    }
+
+    .cta {
+      background: var(--berry);
+      color: white;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 15px 30px rgba(215, 38, 96, 0.25);
+    }
+
+    @media (max-width: 540px) {
+      .card {
+        padding: 36px 24px 44px;
+      }
+
+      .footer {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="content">
+      <span class="badge">14 февраля · наша история</span>
+      <h1 class="title">С Днём Святого Валентина, моя любовь</h1>
+      <p class="subtitle">
+        Ты — мой самый тёплый дом, моя улыбка и вдохновение. Каждый день рядом с тобой
+        превращается в маленькое чудо. Пусть сегодня будет таким же нежным, как твои объятия,
+        а впереди нас ждёт ещё больше общих приключений.
+      </p>
+      <p class="subtitle">
+        Спасибо, что выбираешь нас и наполняешь мои дни светом. Ты —
+        <span class="highlight">самый красивый повод верить в любовь</span>.
+      </p>
+
+      <section class="heart-grid">
+        <div class="heart-card">
+          <div class="heart">❤</div>
+          <div>Нежность, которую хочется беречь.</div>
+        </div>
+        <div class="heart-card">
+          <div class="heart">❤</div>
+          <div>Поддержка, которая вдохновляет.</div>
+        </div>
+        <div class="heart-card">
+          <div class="heart">❤</div>
+          <div>Смех, который делает мир ярче.</div>
+        </div>
+      </section>
+
+      <div class="footer">
+        <div>Навсегда твой(твоя) <span class="signature">[твоё имя]</span></div>
+        <a class="cta" href="">Обнимаю крепко</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
